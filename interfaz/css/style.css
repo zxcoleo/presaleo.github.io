@@ -20,6 +20,9 @@ body, html {
     transform: translate(-50%, -50%);
 }
 
+.text-green {
+    color: green;
+}
 
 .value, .indicator {
     color: rgb(0, 0, 0); /* Texto negro */
@@ -285,6 +288,7 @@ body, html {
 .securetext {
     display: block;
     text-align: center; /* Para centrar el contenido horizontalmente */
+    font-size: 10px;
 }
 
 
@@ -296,4 +300,30 @@ body, html {
 
 
 
+
+.progress-container {
+    position: relative; /* Contenedor relativo para posicionar elementos hijos absolutamente */
+    width: 100%; /* Ajustar según el diseño necesario */
+    height: 35px; /* Ajustar según el diseño necesario */
+}
+
+.progress {
+    position: relative; /* Para que la barra de progreso pueda ser referenciada */
+    width: 100%; /* Ajustar según el diseño necesario */
+    height: 100%; /* Ajustar según el diseño necesario */
+}
+
+.bar {
+    height: 100%; /* Ajustar según el diseño necesario */
+    background-color: #ccc; /* Color de fondo de la barra de progreso */
+}
+
+.progress-img {
+    position: absolute; /* Posición absoluta para la imagen */
+    top: 22px; /* Ajustar según el diseño necesario */
+    left: 90%; /* Ajustar según el diseño necesario */
+    transform: translate(-50%, -50%); /* Centrar la imagen correctamente */
+    height: 50px; /* Ajustar según el diseño necesario */
+    width: 50px; /* Ajustar según el diseño necesario */
+}
 
