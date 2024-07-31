@@ -1,0 +1,347 @@
+@media screen and (max-width: 767px){
+	
+}
+@media screen and (max-width: 991px){
+	.d-flex {
+	    flex-wrap: wrap;
+	}
+	.page-title h2 {
+	    font-size: 46px;
+	}
+	.btn.btn-primary {
+	    font-size: 20px;
+	    padding: 8px 30px;
+	}
+	.nav-main .logo img {
+	    max-width: 180px;
+	}
+	.nav-main .navbar-toggler {
+	    height: 45px;
+	    width: 45px;
+	    line-height: 46px;
+	    padding: 0px;
+	    border: 0px;
+	    background-color: #FCCB25;
+	    color: #000;
+	    font-size: 20px;
+	    outline: 0 !important;
+    	box-shadow: none !important;
+	}
+	.navbar .nav-main {
+	    position: relative;
+	}
+	.nav-right .navbar-collapse {
+	    position: absolute;
+	    top: 100%;
+	    left: 0px;
+	    right: 0px;
+	    text-align: left;
+	    margin-top: 15px;
+	}
+	header.fixed .nav-right .navbar-collapse {
+		margin-top: 8px;
+	}
+	header.fixed .nav-main .navbar-toggler {
+	    background: transparent;
+	    color: #fff;
+	}
+	.nav-right .navbar-collapse .navbar-nav {
+	    background-color: #222b4d;
+	}
+	.navbar-nav .nav-item {
+		margin-right: 0px;
+	}
+	.navbar-nav .nav-item.active {
+	    text-shadow: none;
+	}
+	.navbar-nav .nav-item .nav-link {
+	    font-size: 18px;
+	    padding: 6px 16px;
+	}
+	.hero {
+	    padding-top: 180px;
+	}
+	.hero-text {
+	    text-align: center;
+	}
+	.hero-media,
+	.hero .grass-right,
+	.moonsheet-bg,
+	.moonsheet-media,
+	.trade-media {
+	    display: none;
+	}
+	.tokenomics {
+	    text-align: center;
+	}
+	.tokenomics .tokenomics-chart {
+	    margin: 0px 0px 50px;
+	}
+	.tokenomics-list ul > li {
+	    font-size: 22px;
+	}
+	.trade-card .trade-input > span,
+	.trade-right > span,
+	.trade-right > h3,
+	.trade-card p,
+	.info-card h3,
+	.footer-menu ul > li > a,
+	.footer-copyright p {
+		font-size: 18px;
+	}
+	.form-control {
+		font-size: 22px;
+	}
+	.info-card {
+		padding: 30px;
+	}
+	.about-media img {
+	    max-width: 480px;
+	}
+	.tokenomics-chart img {
+	    max-width: 380px;
+	}
+	.trade-card .trade-input > span > img,
+	.trade-right > span > img {
+	    max-width: 24px;
+	}
+	.trade-right > span > img {
+	    position: relative;
+	    top: -2px;
+	    margin-right: 6px;
+	}
+	.voltichange-widget {
+	    width: 100% !important;
+	}
+	.footer-menu ul > li {
+	    padding: 0px 14px;
+	}
+	.footer-social img {
+	    max-width: 50px;
+	}
+	.footer-logo img {
+	    max-width: 200px;
+	}
+}
+@media screen and (max-width: 767px){
+	br {
+		display: none;
+	}
+	.mb-20 {
+		margin-bottom: 0px;
+	}
+	.page-paddings {
+	    padding: 50px 0px;
+	}
+	.page-title h2 {
+	    font-size: 30px;
+	    text-shadow: none;
+	    margin-bottom: 8px;
+	}
+	.trade .page-title {
+		margin-bottom: 30px;
+	}
+	.mt-50 {
+	    margin-top: 30px;
+	}
+	body,
+	.phase-card ul li,
+	.moonsheet-table tr > td,
+	.tokenomics-list ul > li,
+	.trade-card p {
+	    font-size: 16px;
+	}
+	.moonsheet-table tr > th > span {
+	    font-size: 16px;
+	    text-shadow: none;
+	    color: #000000;
+	    font-weight: 600;
+	}
+	.hero {
+	    padding-top: 140px;
+	}
+	.hero-text h1 {
+	    font-size: 32px;
+	    margin-bottom: 15px;
+	}
+	.hero-text > span {
+	    font-size: 15px;
+	    word-break: break-word;
+	}
+	.hero-text > span {
+	    margin-bottom: 30px;
+	}
+	.about-media img,
+	.tokenomics-chart img {
+	    max-width: 100%;
+	}
+	.tokenomics-text .btn.btn-primary {
+	    width: 100%;
+	    margin-right: 0px;
+	}
+	.phase-card {
+	    margin-top: 30px;
+	}
+	.phase-title h3 {
+	    font-size: 30px;
+	}
+	.trade-right > span {
+	    padding: 12px 15px;
+	    font-size: 15px;
+	    width: 100%;
+	}
+	.trade-card .trade-input {
+	    display: block !important;
+	}
+	.trade-right {
+	    width: 100%;
+	    text-align: left;
+	}
+	.footer-menu ul > li {
+	    padding: 5px 15px;
+	}
+	.footer-social > a {
+	    margin: 3px;
+	}
+	.footer-copyright p {
+		font-size: 16px;
+	}
+}
+@media screen and (max-width: 767px) and (min-width: 575px){
+	.page-title h2 {
+	    font-size: 45px;
+	}
+	.tokenomics-text .btn.btn-primary {
+	    width: calc(50% - 7px);
+	    margin: 3px;
+	}
+	.tokenomics-chart img {
+	    max-width: 400px;
+	}
+}
+@media screen and (max-width: 767px){
+	body {
+	    text-align: center;
+	}
+	.phase-card ul li,
+	.trade-card .trade-input {
+		text-align: left;
+	}
+	.moonsheet-table table {
+	    width: 700px !important;
+	}
+}
+@media screen and (max-width: 991px) and (min-width: 768px){
+	body,
+	.phase-card ul li,
+	.moonsheet-table tr > th > span {
+	    font-size: 18px;
+	}
+	.hero-text h1 {
+	    font-size: 60px;
+	}
+	.hero-text > span {
+	    font-size: 18px;
+	    margin-bottom: 50px;
+	}
+	.phase-title h3 {
+	    font-size: 30px;
+	}
+	.trade-right {
+		width: 90%;
+	}
+	.trade-card .trade-input {
+	    flex-wrap: nowrap;
+	}
+}
+@media screen and (max-width: 1600px) and (min-width: 992px){
+	body {
+		font-size: 18px;
+	}
+	.page-title h2 {
+	    font-size: 54px;
+	}
+	.page-title p {
+	    max-width: 680px;
+	}
+	br {
+		display: none;
+	}
+	.nav-main .logo img {
+	    max-width: 150px;
+	}
+	.navbar-nav .nav-item {
+	    margin-right: 15px;
+	}
+	.navbar-nav .nav-item .nav-link {
+	    font-size: 16px;
+	    padding: 0px 12px;
+	}
+	.hero {
+	    padding-top: 180px;
+	}
+	.hero-text h1 {
+	    font-size: 60px;
+	}
+	.hero-text > span {
+	    font-size: 16px;
+	}
+	.hero-media {
+	    transform: none;
+	}
+	.hero-media img {
+	    max-width: 280px;
+	}
+	.about-media img {
+	    max-width: 560px;
+	}
+	.tokenomics .tokenomics-chart {
+	    margin: 0px;
+	}
+	.tokenomics-list ul > li,
+	.trade-card p,
+	.trade-right > h3,
+	.phase-card ul li,
+	.trade-right > span,
+	.trade-card .trade-input > span,
+	.btn.btn-primary,
+	.footer-menu ul > li > a {
+	    font-size: 20px;
+	}
+	.tokenomics-text .btn.btn-primary {
+	    margin-right: 15px;
+	    font-size: 20px;
+	}
+	.phase-title h3 {
+	    font-size: 30px;
+	}
+	.trade-media {
+	    display: none;
+	}
+	.trade-right {
+		width: 515px;
+	}
+	.moonsheet-table tr > th > span {
+	    font-size: 22px;
+	}
+	.info-card {
+	    padding: 30px;
+	}
+	.info-card h3 {
+		font-size: 26px;
+	}
+	.footer-logo img {
+	    max-width: 260px;
+	}
+	.footer-menu ul > li {
+	    padding: 0px 20px;
+	}
+	.footer-social > a img {
+	    max-width: 60px;
+	}
+}
+@media screen and (max-width: 1600px) and (min-width: 1200px){
+	.trade-right {
+	    width: 550px;
+	}
+}

@@ -1,0 +1,1242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quantico', sans-serif;
+    background: #fff;
+    color: #000;
+}
+
+html {
+    scroll-padding-top: 84px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ccc;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #FFCA00;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a,
+.nav-link {
+    text-decoration: none;
+    transition: 0.2s linear;
+}
+
+.primary-btn {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: normal;
+    color: #000;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    padding: 14px 24px;
+    background: #FFCA00;
+    transition: 0.2s linear;
+}
+
+.secondary-btn {
+    color: #fff;
+    border-color: #fff;
+    background: transparent;
+}
+
+.section-title {
+    color: #000;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px #000;
+}
+
+.title-group p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 160%;
+}
+
+/* Header */
+header {
+    position: absolute;
+    background: rgba(1, 1, 1, 0.26);
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    padding-block: 19px;
+    transition: 0.2s linear;
+}
+
+header.fixed {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    margin: 0px;
+    background: #000;
+}
+
+.navbar-collapse {
+    flex-grow: 0;
+}
+
+.navbar {
+    padding: 0;
+}
+
+#navbar-right .navbar-nav {
+    gap: 24px;
+}
+
+#navbar-right .navbar-nav .nav-link {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 180%;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 10px;
+}
+
+#navbar-right .navbar-nav .nav-link:focus,
+#navbar-right .navbar-nav .nav-link:hover,
+#navbar-right .navbar-nav .nav-link.active {
+    color: #fff;
+}
+
+a.dropdown-item {
+    font-size: 18px;
+    line-height: 1.7;
+    font-weight: 700;
+    padding: 10px;
+    color: #141414;
+    text-transform: uppercase;
+}
+
+.toggle-menu-icon {
+    width: 24px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.toggle-menu-icon span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+    background: #fff;
+}
+
+.toggle-menu-icon span:nth-child(1) {
+    top: 2px;
+}
+
+.toggle-menu-icon span:nth-child(2),
+.toggle-menu-icon span:nth-child(3) {
+    top: 10px;
+}
+
+.toggle-menu-icon span:nth-child(4) {
+    top: 18px;
+}
+
+.toggle-menu-icon.open span:nth-child(1) {
+    top: 11px;
+    width: 0%;
+    left: 50%;
+}
+
+.toggle-menu-icon.open span:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.toggle-menu-icon.open span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+.toggle-menu-icon.open span:nth-child(4) {
+    top: 11px;
+    width: 0%;
+    left: 50%;
+}
+
+.navbar-toggler:focus,
+button:focus {
+    box-shadow: none;
+}
+
+/* Banner */
+.banner {
+    background: url('../images/banner-bg.png') no-repeat;
+    padding-block: 138px 20px;
+    background-size: cover;
+    position: relative;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 9;
+    display: grid;
+    gap: 44px;
+    padding-bottom: 90px;
+}
+
+.banner h6 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: normal;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.banner h1 {
+    font-size: 75px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+.banner h1 span {
+    color: #FFCA00;
+}
+
+.banner p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 160%;
+    color: #FFF;
+}
+
+.banner .social-media {
+    flex-direction: column;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.banner .social-media a {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+    border-radius: 50%;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.cloud {
+    margin-block: -240px;
+    position: relative;
+}
+
+/*  */
+.how-buy {
+    padding-bottom: 80px;
+}
+
+#circone {
+    margin: auto;
+    position: relative;
+    background: url('../images/moon.png') no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    width: 913px;
+    height: 565px;
+    text-align: center;
+    margin-bottom: 94px;
+}
+
+.how-buy .title-group p {
+    font-weight: 700;
+    max-width: 475px;
+    margin: 0 auto;
+}
+
+.cism {
+    position: absolute;
+    display: grid;
+    place-content: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+}
+
+#twoa {
+    transform: translate(-130px, 10px);
+}
+
+#twob {
+    transform: translate(-110px, 175px);
+}
+
+#twoc {
+    transform: translate(0, 350px);
+}
+
+#twod {
+    transform: translate(0px, 530px);
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#twoe {
+    left: auto;
+    right: 0;
+    transform: translate(0, 350px);
+}
+
+#twof {
+    left: auto;
+    right: 0;
+    transform: translate(110px, 175px);
+}
+
+#twog {
+    left: auto;
+    right: 0;
+    transform: translate(130px, 10px);
+}
+
+.buy-card {
+    border-radius: 16px;
+    box-shadow: 0px 0px 0px 2px #20134C;
+    border: 10px solid #DDEBF6;
+    padding: 24px;
+    height: 100%;
+}
+
+.buy-card p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 160%;
+    color: rgba(0, 0, 0, 0.50);
+}
+
+.buy-card h3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: normal;
+    color: #000;
+    -webkit-text-stroke: 0.5px #000;
+    text-transform: uppercase;
+}
+
+/* Whitepaper */
+.whitepaper {
+    overflow: hidden;
+}
+
+.whitepaper p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 160%;
+    margin-block: 36px;
+}
+
+.whitepaper ul {
+    display: grid;
+    gap: 24px;
+}
+
+.whitepaper ul li {
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 160%;
+    border-radius: 16px;
+    background: rgba(221, 235, 246, 0.30);
+    padding: 24px 16px;
+}
+
+/* ecosystem */
+.ecosystem {
+    padding-block: 150px;
+    position: relative;
+}
+
+.ecosystem::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -360px;
+    background: url('../images/ecosystem-bg.png') no-repeat;
+    height: 1820px;
+    width: 100%;
+    z-index: -1;
+}
+
+.ecosystem .title-group {
+    margin-bottom: 30px;
+}
+
+.ecosystem .title-group p {
+    max-width: 822px;
+    margin: 20px auto 0;
+    text-align: center;
+}
+
+.ecosystem-card {
+    border-radius: 16px;
+    box-shadow: 0px 0px 0px 2px #20134C;
+    border: 10px solid #F6F6F6;
+    padding: 30px 16px;
+    height: 100%;
+    background: #fff;
+}
+
+.ecosystem-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #000;
+    -webkit-text-stroke: 0.5px #000;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+}
+
+.ecosystem-card p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 160%;
+    color: rgba(0, 0, 0, 0.50);
+}
+
+.distribution {
+    padding-bottom: 150px;
+
+}
+
+.token-point {
+    border-radius: 16px;
+    box-shadow: 0px 0px 0px 2px #20134C;
+    border: 32px solid #F6F6F6;
+    padding: 20px 16px;
+    padding-left: 46px;
+    height: 100%;
+    background: #fff;
+    list-style: disc;
+    display: grid;
+    gap: 6px;
+}
+
+.token-point li {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Partner */
+.partner {
+    padding-block: 150px;
+    background: url('../images/partner-bg.png') no-repeat;
+    background-size: cover;
+
+}
+
+.roadmap {
+    position: relative;
+    background: url('../images/roadmap-bg.png') no-repeat;
+    background-size: cover;
+    padding-block: 20px 150px;
+    overflow: hidden;
+}
+
+.roadmap::before {
+    content: '';
+    position: absolute;
+    background: url('../images/cloud-2.png') no-repeat;
+    background-size: cover;
+    top: -260px;
+    left: 0;
+    width: 100%;
+    height: 502px;
+}
+
+.roadmap .title-group p,
+.partner .title-group p {
+    max-width: 594px;
+    margin: 30px auto 40px;
+}
+
+.roadmap {
+    padding-bottom: 150px;
+}
+
+.partner-card {
+    border-radius: 16px;
+    border: 1px solid #20134C;
+    background: #FFF;
+    padding: 24px;
+}
+
+.roadmap-card {
+    border-radius: 16px;
+    padding: 16px;
+    background: linear-gradient(#D9F9FF 50%, #000 50%)
+}
+
+.roadmap-card ul {
+    display: grid;
+    gap: 40px;
+    border-radius: 16px;
+    background: #FFF;
+    padding: 26px;
+}
+
+.roadmap-card ul li {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 160%;
+}
+
+.roadmap-card h3 {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: normal;
+    color: #FFF;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* About */
+
+/* Footer */
+footer {
+    text-align: center;
+}
+
+.footer-top {
+    padding-block: 70px;
+    background: url('../images/footer-bg.png') no-repeat;
+    background-size: cover;
+}
+
+.footer-top p {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 150%;
+    color: #FFF;
+    text-align: center;
+    max-width: 849px;
+    margin: 0 auto 50px;
+}
+
+.footer-link {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px 30px;
+    margin-block: 50px 24px;
+}
+
+.footer-link .nav-link {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 180%;
+    color: #FFCA00;
+    text-transform: uppercase;
+}
+
+.footer-bottom {
+    padding-block: 15px;
+    background: #E8F0F8;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #000;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-media a {
+    transition: 0.2s linear;
+    width: 42px;
+    height: 42px;
+    font-size: 22px;
+    background: #fff;
+    display: grid;
+    place-content: center;
+    border-radius: 4px;
+    color: #000;
+}
+
+.social-media a:hover {
+    transform: translateY(-2px);
+}
+
+
+
+@media (min-width: 1500px) {
+    .container {
+        max-width: 1464px;
+    }
+}
+
+@media (max-width: 1700px) {}
+
+@media (max-width: 1500px) {
+    #navbar-right .navbar-nav .nav-link {
+        font-size: 16px;
+    }
+
+    .footer-link {
+        gap: 16px 18px;
+        margin-block: 38px;
+    }
+
+    /*  */
+    .section-title {
+        font-size: 54px;
+    }
+
+    .banner-content {
+        gap: 30px;
+    }
+
+    .banner h1 {
+        font-size: 66px;
+    }
+
+    .roadmap-card ul {
+        gap: 30px;
+    }
+
+    .distribution, .roadmap {
+        padding-bottom: 120px;
+    }
+
+    .partner,
+    .ecosystem {
+        padding-block: 120px;
+    }
+
+    .whitepaper ul li {
+        font-size: 22px;
+    }
+
+    #circone {
+        width: 820px;
+        height: 510px;
+        margin-bottom: 94px;
+    }
+
+    #twod {
+        transform: translate(0px, 480px);
+    }
+}
+
+@media (max-width: 1400px) {
+    .buy-btn {
+        padding: 12px 25px;
+    }
+
+    #navbar-right .navbar-nav {
+        gap: 10px;
+    }
+
+    #navbar-right .navbar-nav .nav-link {
+        font-size: 14px;
+        padding-inline: 10px;
+        font-weight: 600;
+    }
+
+    .footer-link .nav-link {
+        font-size: 20px;
+    }
+
+    /*  */
+    .primary-btn {
+        font-size: 20px;
+    }
+
+    .section-title {
+        font-size: 44px;
+    }
+
+    .distribution, .roadmap {
+        padding-bottom: 100px;
+    }
+
+    .partner,
+    .ecosystem {
+        padding-block: 100px;
+    }
+
+    .banner-content {
+        gap: 20px;
+        padding-bottom: 40px;
+    }
+
+    .banner h6 {
+        font-size: 20px;
+    }
+
+    .banner h1 {
+        font-size: 54px;
+    }
+
+    .cloud {
+        margin-block: -190px;
+    }
+
+    .roadmap-card ul li {
+        font-size: 20px;
+    }
+
+    .whitepaper ul li {
+        font-size: 20px;
+        padding: 16px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .section-title {
+        font-size: 44px;
+    }
+
+    #navbar-right .navbar-nav {
+        gap: 0;
+        max-width: 960px;
+        margin: 0 auto;
+        padding-bottom: 10px;
+    }
+
+    #navbar-right .navbar-nav .nav-link {
+        font-size: 16px;
+    }
+
+    header.fixed, header {
+        padding-block: 0;
+    }
+
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #000;
+        width: 100%;
+    }
+
+    .navbar {
+        padding-block: 12px;
+    }
+
+    .footer-top {
+        padding-block: 50px;
+    }
+
+    .footer-link {
+        gap: 16px;
+        margin-block: 36px;
+    }
+
+    .footer-link .nav-link {
+        font-size: 18px;
+    }
+
+    .footer-top p {
+        font-size: 20px;
+        margin: 0 auto 30px;
+    }
+
+    /*  */
+    .section-title {
+        font-size: 38px;
+    }
+
+    .distribution, .roadmap {
+        padding-bottom: 80px;
+    }
+
+    .partner,
+    .ecosystem {
+        padding-block: 80px;
+    }
+
+    .how-buy h2 {
+        font-size: 40px;
+    }
+
+    .how-buy p {
+        font-size: 16px;
+    }
+
+    #circone {
+        width: 660px;
+        height: 410px;
+    }
+
+    .banner {
+        padding-block: 98px 50px;
+    }
+
+    .banner h1 {
+        font-size: 50px;
+    }
+
+    .cism {
+        width: 80px;
+        height: 80px;
+    }
+
+    #twoa {
+        transform: translate(-110px, 10px);
+    }
+
+    #twob {
+        transform: translate(-110px, 135px);
+    }
+
+    #twoc {
+        transform: translate(0, 300px);
+    }
+
+    #twod {
+        transform: translate(0px, 400px);
+    }
+
+    #twoe {
+        transform: translate(0, 300px);
+    }
+
+    #twog {
+        transform: translate(110px, 10px);
+    }
+
+    #twof {
+        transform: translate(110px, 135px);
+    }
+
+    .whitepaper ul {
+        gap: 14px;
+    }
+
+    .whitepaper-right img {
+        max-width: 100%;
+    }
+
+    .whitepaper ul li {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    .whitepaper p {
+        margin-block: 24px;
+    }
+
+    .buy-card h3 {
+        font-size: 22px;
+    }
+
+    .buy-card {
+        padding: 18px;
+    }
+
+    .token-point li {
+        font-size: 20px;
+    }
+
+    .token-point {
+        border: 20px solid #F6F6F6;
+        padding: 16px;
+        padding-left: 36px;
+    }
+
+    .partner-card {
+        padding: 16px;
+    }
+
+    .roadmap-card h3 {
+        font-size: 28px;
+        margin-top: 10px;
+    }
+
+    .roadmap-card ul {
+        gap: 20px;
+    }
+
+    .roadmap .title-group p, .partner .title-group p {
+        margin: 24px auto 30px;
+    }
+}
+
+@media (max-width: 991px) {
+    p {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    .mb-54 {
+        margin-bottom: 30px;
+    }
+
+    .primary-btn {
+        font-size: 16px;
+        padding: 10px 24px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    #navbar-right .navbar-nav {
+        gap: 0;
+        max-width: 720px;
+    }
+
+    #navbar-right .navbar-nav .nav-link {
+        padding: 8px 20px;
+    }
+
+    /*  */
+    #circone {
+        width: 626px;
+        height: 416px;
+        padding-top: 30px;
+    }
+
+    .cism {
+        width: 50px;
+        height: 50px;
+    }
+
+    #twoa {
+        transform: translate(-60px, 10px);
+    }
+
+    #twob {
+        transform: translate(-60px, 135px);
+    }
+
+    #twoc {
+        transform: translate(0, 300px);
+    }
+
+    #twod {
+        transform: translate(0px, 400px);
+    }
+
+    #twoe {
+        transform: translate(0, 300px);
+    }
+
+    #twog {
+        transform: translate(60px, 10px);
+    }
+
+    #twof {
+        transform: translate(60px, 135px);
+    }
+
+    .how-buy .title-group p {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+    }
+
+    .crown-img {
+        text-align: center;
+    }
+
+    .crown-img img {
+        width: 50%;
+    }
+
+    .partner-card {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    p {
+        font-size: 18px;
+    }
+
+    .footer-link {
+        flex-direction: column;
+    }
+
+    #navbar-right .navbar-nav {
+        max-width: 540px;
+    }
+
+    /*  */
+    html {
+        scroll-padding-top: 68px;
+    }
+
+    .distribution, .roadmap {
+        padding-bottom: 60px;
+    }
+
+    .partner,
+    .ecosystem {
+        padding-block: 60px;
+    }
+
+    #circone {
+        width: 536px;
+        height: 332px;
+        margin-bottom: 60px;
+    }
+
+    .how-buy h2 {
+        font-size: 30px;
+    }
+
+    .how-buy .title-group p {
+        max-width: 320px;
+    }
+
+    #twob {
+        transform: translate(-50px, 115px);
+    }
+
+    #twoc {
+        transform: translate(0, 230px);
+    }
+
+    #twod {
+        transform: translate(0px, 330px);
+    }
+
+    #twoe {
+        transform: translate(0, 230px);
+    }
+
+    #twof {
+        transform: translate(50px, 115px);
+    }
+
+    .ecosystem-card {
+        text-align: center;
+        border: 8px solid #F6F6F6;
+        padding: 16px;
+    }
+
+    .banner-content {
+        text-align: center;
+    }
+
+    .banner-right img {
+        height: 500px;
+    }
+
+    .cloud {
+        margin-block: -110px;
+    }
+
+    .how-buy-content {
+        margin-bottom: 20px;
+    }
+
+    #circone {
+        width: auto;
+        height: auto;
+        margin-bottom: 30px;
+        background: transparent;
+    }
+
+    .cism {
+        position: relative;
+        transform: none !important;
+        display: inline-flex;
+        margin-inline: 10px;
+    }
+
+    .ecosystem::before {
+        height: 1000px;
+        background-size: cover;
+    }
+
+
+}
+
+@media (max-width: 576px) {
+    .primary-btn {
+        font-size: 14px;
+        padding: 8px 20px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .mb-54 {
+        margin-bottom: 20px;
+    }
+
+    header .primary-btn {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .navbar-brand img {
+        max-width: 120px;
+    }
+
+    .footer-link .nav-link {
+        font-size: 16px;
+        padding: 8px 20px;
+    }
+
+    .footer-bottom p {
+        font-size: 14px;
+    }
+
+    .social-media a img {
+        height: 46px;
+    }
+
+    .footer-link {
+        gap: 0;
+        margin-block: 20px;
+    }
+
+    .footer-brand img {
+        width: 200px;
+    }
+
+    .footer-top p {
+        font-size: 16px;
+        margin: 0 auto 20px;
+    }
+
+    /*  */
+    .distribution, .roadmap {
+        padding-bottom: 40px;
+    }
+
+    .partner {
+        padding-block: 40px;
+    }
+
+    .roadmap::before {
+        top: -61px;
+        height: 112px;
+    }
+
+    .banner h6 {
+        font-size: 14px;
+    }
+
+    .banner h1 {
+        font-size: 30px;
+    }
+
+    .banner .social-media {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        transition: none;
+        top: auto;
+        right: auto;
+        margin-top: 20px;
+    }
+
+    .cloud {
+        margin-block: -50px;
+    }
+
+    .cism {
+        width: 40px;
+        height: 40px;
+    }
+
+    .buy-card h3 {
+        font-size: 20px;
+    }
+
+    .ecosystem-card h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    .token-point {
+        border: 10px solid #F6F6F6;
+        padding: 16px;
+        padding-left: 32px;
+    }
+
+    .roadmap-card ul li,
+    .token-point li {
+        font-size: 18px;
+    }
+
+    .ecosystem-card p {
+        font-size: 16px;
+        line-height: 140%;
+    }
+
+    .roadmap-card h3 {
+        font-size: 24px;
+    }
+
+    .roadmap-card ul,
+    .roadmap-card {
+        border-radius: 10px;
+        padding: 12px;
+    }
+
+    .partner-card {
+        padding: 6px;
+        border-radius: 6px;
+    }
+
+    .roadmap .title-group p, .partner .title-group p {
+        margin: 20px auto 20px;
+    }
+
+}
+
+@media (max-width: 440px) {}

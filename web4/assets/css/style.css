@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&amp;display=swap');
+body {
+    background-color: #82DDF9;
+    font-family: 'Cairo', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 180%;
+    color: #000;
+}
+img {
+	max-width: 100%;
+}
+ul, li {
+	margin: 0px;
+	list-style: none;
+	padding: 0px;
+}
+p {
+	margin: 0px;
+}
+.mt-10 {
+	margin-top: 10px;
+}
+.mt-20 {
+	margin-top: 20px;
+}
+.mt-30 {
+	margin-top: 30px;
+}
+.mt-40 {
+	margin-top: 40px;
+}
+.mt-50 {
+	margin-top: 50px;
+}
+.mt-60 {
+	margin-top: 60px;
+}
+.mb-20 {
+	margin-bottom: 20px;
+}
+.btn.btn-primary {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: inherit;
+    text-transform: capitalize;
+    border: 1px solid var(--Black, #000);
+    background: var(--Yellow, #FCCB25);
+    box-shadow: 0px 5px 0px 0px #000;
+    padding: 10px 24px 15px 24px;
+    color: #000000;
+}
+.page-paddings {
+    padding: 100px 0px;
+}
+.page-title p {
+    max-width: 1088px;
+    margin: 0px auto;
+    text-transform: capitalize;
+}
+.page-title h2 {
+    color: #000;
+    text-shadow: 0px 4px 0px #FCCB25;
+    font-family: VCR OSD Mono;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+}
+.form-control {
+    color: #ffffff !important;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    background: transparent !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+    border: 0px;
+}
+.form-control::placeholder {
+    color: #ffffff;
+}
+@font-face {
+    font-family: 'VCR OSD Mono';
+    src: url('../../fonts/VCROSDMono.woff2') format('woff2'),
+        url('../../fonts/VCROSDMono.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+/* header */
+header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 99;
+    padding: 30px 0px;
+    transition: all 0.5s;
+}
+header.fixed {
+    position: fixed;
+    padding: 8px 0px;
+    background-color: #1f253b;
+    box-shadow: 0px 0px 15px #0d142a;
+}
+.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+    display: block;
+}
+.navbar-nav .nav-item {
+    margin-right: 30px;
+}
+.navbar-nav .nav-item:last-child {
+    margin-right: 0px;
+}
+.navbar-nav .nav-item .nav-link {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    padding: 0px 16px;
+    color: #ffffff;
+}
+.navbar-nav .nav-item.active,
+.navbar-nav .nav-item:hover {
+    background-color: #FCCB25;
+    display: block;
+    text-shadow: 0px 2px 0px #012D46;
+}
+/* header */
+/* Hero */
+.hero {
+    padding-top: 265px;
+    background-color: #212946;
+    background-image: url(../images/hero.png);
+    background-size: cover;
+    background-position: top center;
+}
+.hero-text h1 {
+    color: #FCCB25;
+    text-shadow: 0px 4px 0px #000;
+    font-family: 'VCR OSD Mono';
+    font-size: 92px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+.hero-text p {
+    margin-bottom: 48px;
+    font-weight: 700;
+    color: #fff;
+}
+.hero-text > span {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    background-color: #FCCB25;
+    padding: 8px 16px;
+    box-shadow: 0px 6px 0px 0px #000;
+    margin-bottom: 118px;
+}
+.hero-text .hero-coin {
+    margin-bottom: 34px;
+}
+.hero .grass-right {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+.hero-media {
+    position: absolute;
+    bottom: -10px;
+    transform: translateX(30px);
+}
+/* Hero */
+/* About */
+.about,
+.roadmap,
+.trade {
+    background-image: url(../images/about-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+/* About */
+/* Tokenomics */
+.tokenomics,
+.moonsheet,
+.info {
+    background-image: url(../images/tokenomics-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    position: relative;
+    z-index: 1;
+}
+.tokenomics .page-title h2 {
+    color: #FCCB25;
+}
+.tokenomics .page-title p {
+    color: #ffffff;
+}
+.tokenomics .tokenomics-chart {
+    margin-left: -140px;
+}
+.tokenomics-list ul > li {
+    text-shadow: 0px 6px 0px #000;
+    font-family: Cairo;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    color: #ffffff;
+}
+.tokenomics-list ul > li:last-child {
+    margin-bottom: 0px;
+}
+.tokenomics-text .btn.btn-primary {
+    margin-right: 30px;
+}
+.tokenomics-text .btn.btn-primary:last-child {
+    margin-right: 0px;
+}
+/* Tokenomics */
+.phase-card {
+    background: #131724;
+    padding: 16px 16px;
+    margin-top: 40px;
+}
+.phase-title h3 {
+    color: #FCCB25;
+    text-shadow: 0px 4px 0px #000;
+    font-family: VCR OSD Mono;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    background: #222A47;
+    box-shadow: 0px 3px 0px 0px #FCCB25;
+    padding: 24px 24px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.phase-card ul li {
+    color: #ffffff;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 38px;
+}
+.phase-card ul li:last-child {
+    margin-bottom: 0px;
+}
+.phase-card ul li > img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0px;
+}
+
+.info .page-title h2 {
+    color: #FCCB25;
+}
+.info .page-title p {
+	color: #ffffff;
+}
+.info-card {
+    background: #131724;
+    padding: 30px 137px 30px 24px;
+    margin-top: 30px;
+}
+.info-card .info-ico {
+    margin-bottom: 40px;
+}
+.info-card h3 {
+    color: #FCCB25;
+    text-shadow: 0px 4px 0px #000;
+    font-family: Cairo;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+}
+.info-card p {
+    color: #fff;
+}
+
+
+
+.moonsheet-bg {
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/point.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: -1;
+}
+.moonsheet .page-title h2 {
+    color: #FCCB25;
+}
+.moonsheet .page-title p {
+    color: #ffffff;
+}
+.moonsheet .moonsheet-table {
+    border: 2px solid var(--White, #FFF);
+    background: #82DDF9;
+    box-shadow: 0px 4px 0px 0px #FFF;
+    padding: 30px 15px;
+    margin-top: 25px;
+}
+.moonsheet-table tr > th > span {
+    color: #FCCB25;
+    text-shadow: 0px 3px 0px #000;
+    font-family: VCR OSD Mono;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    border-radius: 4px;
+    background: #5BCCEB;
+    padding: 16px 24px;
+    display: inline-block;
+}
+.moonsheet-table tr > td {
+    color: #000000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    padding: 12px 30px;
+}
+.moonsheet-table tr > td .moonsheet-process {
+    display: block;
+    width: 100%;
+    height: 16px;
+    border: 1px solid var(--Black, #000);
+    background: linear-gradient(270deg, #FCCB25 50%, rgba(217, 217, 217, 0.00) 101.05%);
+    box-shadow: 0px 4px 0px 0px #000;
+}
+
+
+
+.trade .page-title {
+    margin-bottom: 50px;
+}
+.trade-card {
+    background: #222A47;
+    padding: 32px;
+}
+.trade-card .trade-input {
+    border-radius: 16px;
+    background: #1F243A;
+    padding: 16px 16px;
+    margin-bottom: 24px;
+}
+.trade-card .trade-input > span {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.trade-card .trade-input > span > img {
+    position: relative;
+    top: -3px;
+    margin-right: 8px;
+}
+.trade-input .setting-ico {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 16px;
+    cursor: pointer;
+}
+.trade-right {
+    width: 84%;
+    text-align: right;
+}
+.trade-right.text-left h3 {
+    text-align: left;
+}
+.trade-right > span {
+    border: 1px solid #3F496F;
+    background: #222A47;
+    box-shadow: 0px 5px 0px 0px #3F496F;
+    padding: 5px 64px;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.trade-right > span > img {
+    position: relative;
+    top: -4px;
+}
+.trade-right > h3 {
+    color: #FFF;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: capitalize;
+    margin: 20px 0px 0px;
+}
+.trade-right > h3 > span {
+    color: #FCCB25;
+    font-weight: 700;
+    vertical-align: middle;
+}
+.trade-btn .btn.btn-primary {
+    padding: 22px 24px;
+}
+.trade-card p {
+    color: #FFF;
+    font-family: Cairo;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-top: 0px;
+}
+
+.fodHYv {
+    width: 100% !important;
+}
+
+.footer-menu ul > li {
+    padding: 0px 28px;
+}
+.footer-menu ul > li > a {
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 180%;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.footer-social > a {
+    display: inline-block;
+    margin: 0px 15px;
+}
+.footer-copyright {
+    background-color: #000000;
+    padding: 12px 0px;
+}
+.footer-copyright p {
+    color: #ffffff;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+div#toTop {
+    height: 50px;
+    width: 50px;
+    line-height: 44px;
+    border-radius: 100%;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #212946;
+    color: #ffffff;
+    border: 3px solid #fff;
+    text-align: center;
+    font-size: 24px;
+    display: none;
+    z-index: 999;
+    cursor: pointer;
+}
+
+@media(min-width: 1200px) {
+	.container {
+	    max-width: 1433px;
+	}
+}
