@@ -1,0 +1,873 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Transformers';
+    src: url('../fonts/TransformersMovie.woff2') format('woff2'),
+        url('../fonts/TransformersMovie.woff') format('woff');
+    font-display: swap;
+}
+
+:root {
+    --primary-clr: #E0C500;
+    --secondary-clr: #0D0D0D;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    background: #000000;
+    line-height: 1.1;
+}
+
+html {
+    scroll-padding-top: 101px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ccc;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary-clr);
+}
+
+::selection {
+    background-color: var(--primary-clr);
+    color: #fff;
+    -webkit-text-fill-color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Transformers', sans-serif;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a,
+.nav-link {
+    text-decoration: none;
+    transition: 0.2s linear;
+}
+
+.primary-btn {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #000;
+    border: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: 0.2s linear;
+    text-transform: capitalize;
+    padding: 1px;
+    padding: 18px 41px 17px 40px;
+    background-color: #72b746;
+}
+
+
+button.primary-btn:hover {
+    box-shadow: none;
+}
+
+.title-group {
+    margin-bottom: 48px;
+}
+
+.section-title {
+    font-size: 54px;
+    line-height: 1.1;
+    margin-bottom: 14px;
+    color: #fff;
+
+}
+
+.description {
+    font-size: 24px;
+    color: #fff;
+    line-height: 1.3;
+}
+
+.inner-gap {
+    padding: 140px 0;
+}
+
+/* loader */
+.loader-wrapper {
+    width: 100%;
+    z-index: 9999;
+    height: 100vh;
+    display: flex;
+}
+
+.loader {
+    width: 50px;
+    aspect-ratio: 1;
+    display: grid;
+    border: 4px solid #0000;
+    border-radius: 50%;
+    border-color: #ccc #0000;
+    animation: l16 1s infinite linear;
+}
+
+.loader::before,
+.loader::after {
+    content: "";
+    grid-area: 1/1;
+    margin: 2px;
+    border: inherit;
+    border-radius: 50%;
+}
+
+.loader::before {
+    border-color: #ff72d7 #0000;
+    animation: inherit;
+    animation-duration: .5s;
+    animation-direction: reverse;
+}
+
+.loader::after {
+    margin: 8px;
+}
+
+@keyframes l16 {
+    100% {
+        transform: rotate(1turn)
+    }
+}
+
+/* Header */
+header {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    padding: 25px 0;
+    transition: 0.2s linear;
+    background-color: var(--primary-clr);
+}
+
+header.fixed {
+    box-shadow: 0 0 4px #d9d7d76b;
+}
+
+.navbar-collapse {
+    flex-grow: 0;
+}
+
+.navbar {
+    padding: 0;
+    position: relative;
+}
+
+.navbar-brand {
+    -webkit-text-stroke: 0.5px #fff;
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+}
+
+.navbar-brand:hover {
+    color: #fff;
+}
+
+#navbar-right .navbar-nav {
+    gap: 28px;
+}
+
+#navbar-right .navbar-nav .nav-link {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    padding: 0;
+    text-transform: capitalize;
+}
+
+#navbar-right .navbar-nav .nav-link:focus,
+#navbar-right .navbar-nav .nav-link:hover,
+#navbar-right .navbar-nav .nav-link.active {
+    color: #000;
+}
+
+.toggle-menu-icon {
+    width: 24px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.toggle-menu-icon span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+    background: #000;
+}
+
+.toggle-menu-icon span:nth-child(1) {
+    top: 2px;
+}
+
+.toggle-menu-icon span:nth-child(2),
+.toggle-menu-icon span:nth-child(3) {
+    top: 10px;
+}
+
+.toggle-menu-icon span:nth-child(4) {
+    top: 18px;
+}
+
+.toggle-menu-icon.open span:nth-child(1) {
+    top: 11px;
+    width: 0%;
+    left: 50%;
+}
+
+.toggle-menu-icon.open span:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.toggle-menu-icon.open span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+.toggle-menu-icon.open span:nth-child(4) {
+    top: 11px;
+    width: 0%;
+    left: 50%;
+}
+
+.navbar-toggler:focus,
+button:focus {
+    box-shadow: none;
+}
+
+/* Banner */
+.banner {
+    position: relative;
+    background-color: #050505;
+}
+
+.banner h1 {
+    font-size: 80px;
+}
+
+.text-btn {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #72b746;
+    display: inline-block;
+}
+
+.banner p {
+    max-width: 617px;
+    margin: 28px 0 24px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #949494;
+}
+
+.banner-elem {
+    margin-top: 84px;
+}
+
+/*  */
+.about {
+    background-image: url('../images/about-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.row-gap-30 {
+    row-gap: 30px;
+}
+
+.about-card {
+    padding: 30px;
+    border-radius: 20px;
+    background-color: #050505;
+}
+
+.about-card h3 {
+    font-size: 36px;
+    margin-bottom: 22px;
+}
+
+.about-card p {
+    font-size: 18px;
+    line-height: 1.4;
+    color: #949494;
+}
+
+.guide-card {
+    height: 100%;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: #fff;
+    transition: 0.2s linear;
+    z-index: 9;
+    position: relative;
+    border: 4px solid transparent;
+}
+
+.guide-card:hover {
+    border-color: var(--primary-clr);
+}
+
+.guide-elem {
+    margin-bottom: 40px;
+}
+
+.guide-card h3 {
+    font-size: 32px;
+    letter-spacing: 3.84px;
+    color: #000;
+    margin-bottom: 20px;
+    -webkit-text-stroke: 2px #000;
+}
+
+.guide-card p {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #000;
+}
+
+.tokenomics {
+    background-image: url('../images/tokenomics-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.tokenomics h2 {
+    color: #000;
+}
+
+.tokenomics h3 {
+    font-size: 80px;
+    line-height: 1;
+    color: var(--primary-clr);
+}
+
+.tokenomics p {
+    color: rgba(0, 0, 0, 0.6);
+    margin: 40px 0;
+}
+
+.primary-text {
+    color: var(--primary-clr) !important;
+}
+
+.roadmap h2 {
+    color: #000;
+}
+
+.roadmap .title-group p {
+    color: #949494;
+}
+
+.roadmap-line {
+    height: 4px;
+    width: 100%;
+    background-color: var(--primary-clr);
+}
+
+.roadmap-title {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 28px 0;
+}
+
+.roadmap-title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 40px;
+    width: 4px;
+    height: 100%;
+    background-color: var(--primary-clr);
+}
+
+.roadmap-title h3 {
+    font-size: 34px;
+    letter-spacing: 1.02px;
+    color: #111;
+}
+
+.roadmap-title h6 {
+    font-size: 40px;
+    position: absolute;
+    font-weight: 700;
+    top: -40px;
+    right: 10px;
+    color: #0b0924;
+    width: 66px;
+    height: 66px;
+    display: grid;
+    place-content: center;
+    background-color: var(--primary-clr);
+    border-radius: 50%;
+}
+
+.roadmap-card {
+    padding: 40px 30px;
+    border-radius: 20px;
+    border: 1px solid var(--primary-clr);
+    background-color: rgba(224, 197, 0, 0.2);
+    height: 100%;
+}
+
+.roadmap-card ul {
+    list-style: disc;
+    padding-left: 18px;
+}
+
+.roadmap-card li {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 2.5;
+    letter-spacing: 0.6px;
+    color: #000;
+}
+
+.black-card.roadmap-card {
+    background-color: #000;
+}
+
+.black-card.roadmap-card li {
+    color: #fff;
+}
+
+/*  */
+.social-media a {
+    display: grid;
+    place-content: center;
+    width: 48px;
+    height: 48px;
+    font-size: 26px;
+    color: #000;
+    border-radius: 50%;
+    border: 1px solid #111111;
+    background-color: transparent;
+}
+
+/* Footer */
+footer {
+    background-color: #111111;
+}
+
+.footer-top {
+    padding: 70px 0 40px;
+    position: relative;
+}
+
+.footer-top p {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    color: #949494;
+    max-width: 1138px;
+    margin: 30px auto 0;
+}
+
+.f-menu {
+    margin-top: 30px;
+}
+
+.f-menu a {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.8;
+    letter-spacing: 0.9px;
+    color: #fff;
+}
+
+.footer-top {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.footer-bottom p {
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: center;
+    color: #fff;
+    padding: 30px 0;
+}
+
+/* Responsive CSS */
+
+@media (min-width: 1500px) {
+    .container {
+        max-width: 1456px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .section-title {
+        font-size: 50px;
+    }
+
+    #navbar-right .navbar-nav {
+        gap: 20px;
+    }
+
+    header {
+        top: 0;
+        padding: 20px 0;
+    }
+
+    .inner-gap {
+        padding: 100px 0;
+    }
+
+    .title-group {
+        margin-bottom: 36px;
+    }
+
+    .banner {
+        padding: 40px 0;
+    }
+
+    .banner h1 {
+        font-size: 60px;
+    }
+
+    .social-media a {
+        height: 40px;
+        width: 40px;
+        font-size: 20px;
+    }
+
+    html {
+        scroll-padding-top: 76px;
+    }
+
+    /*  */
+    .guide-card {
+        padding: 20px;
+    }
+
+    .guide-card h3 {
+        font-size: 28px;
+        letter-spacing: 2.84px;
+        margin-bottom: 12px;
+    }
+
+    .guide-card p {
+        font-size: 18px;
+    }
+
+    .guide-elem {
+        margin-bottom: 28px;
+    }
+
+    .tokenomics h3 {
+        font-size: 70px;
+    }
+
+    .tokenomics p {
+        margin: 30px 0;
+    }
+
+    .roadmap-card {
+        padding: 30px;
+    }
+
+    .roadmap-card li {
+        font-size: 18px;
+        line-height: 2.5;
+        word-break: break-word;
+    }
+}
+
+@media (max-width: 1199px) {
+    .section-title {
+        font-size: 44px;
+    }
+
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: var(--primary-clr);
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .navbar-collapse.show {
+        box-shadow: 0 2px 4px #9191916b;
+    }
+
+    #navbar-right .navbar-nav {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 20px 12px;
+    }
+
+    .banner h1 {
+        font-size: 54px;
+    }
+
+    .title-group {
+        margin-bottom: 30px;
+    }
+
+    .description {
+        font-size: 22px;
+    }
+
+    footer h2 {
+        font-size: 34px;
+    }
+
+    /*  */
+    .about-card {
+        padding: 24px;
+    }
+
+    .about-card h3 {
+        font-size: 32px;
+        margin-bottom: 16px;
+    }
+
+    .roadmap-card {
+        padding: 20px;
+    }
+
+    .about-card h3 {
+        font-size: 28px;
+    }
+
+    .guide-card h3 {
+        font-size: 26px;
+    }
+
+    .tokenomics h3 {
+        font-size: 60px;
+    }
+
+    .description {
+        font-size: 20px;
+    }
+
+    .footer-top p {
+        margin: 20px auto 0;
+    }
+}
+
+@media (max-width: 991px) {
+    #navbar-right .navbar-nav {
+        max-width: 960px;
+    }
+
+    #navbar-right .navbar-nav {
+        gap: 0;
+        max-width: 720px;
+    }
+
+    #navbar-right .navbar-nav .nav-link {
+        font-size: 18px;
+        padding: 8px 0;
+    }
+
+    .primary-btn {
+        font-size: 16px;
+    }
+
+    .section-title {
+        font-size: 40px;
+    }
+
+    .inner-gap {
+        padding: 70px 0;
+    }
+
+    .title-group {
+        margin-bottom: 24px;
+    }
+
+    .banner p {
+        margin: 20px 0 24px;
+    }
+
+    .banner-elem {
+        margin-top: 34px;
+    }
+
+    .footer-bottom p {
+        font-size: 16px;
+        padding: 16px 0;
+    }
+
+    .about-elem {
+        text-align: center;
+    }
+
+    .about-elem img {
+        max-width: 400px;
+    }
+
+    .roadmap-title::before, .roadmap-title h6 {
+        display: none;
+    }
+
+    .roadmap-title {
+        padding: 0 0 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    header {
+        padding: 12px 0;
+    }
+
+    header.fixed {
+        padding: 12px 0;
+    }
+
+    #navbar-right .navbar-nav {
+        max-width: 540px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .inner-gap {
+        padding: 70px 0;
+    }
+
+    .banner h1 {
+        font-size: 50px;
+    }
+
+    .f-menu {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .description {
+        font-size: 16px;
+    }
+
+    .navbar-collapse {
+        margin-top: 12px;
+    }
+
+    .primary-btn {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+
+    .inner-gap {
+        padding: 40px 0;
+    }
+
+    .row-gap-30 {
+        row-gap: 16px;
+    }
+
+    /*  */
+    .about-elem img {
+        max-width: 300px;
+    }
+
+    .about-card {
+        padding: 16px;
+    }
+
+    .about-card h3 {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+
+    .roadmap-card li {
+        font-size: 16px;
+        line-height: 2;
+    }
+
+    .about-card p,
+    .footer-top p, .text-btn, .guide-card p {
+        font-size: 16px;
+    }
+
+    .footer-top {
+        padding: 40px 0;
+    }
+
+    .tokenomics h3 {
+        font-size: 36px;
+    }
+
+    .tokenomics p {
+        margin: 20px 0;
+    }
+
+    .roadmap-card,
+    .guide-card {
+        padding: 16px;
+    }
+
+    .guide-card h3 {
+        font-size: 22px;
+    }
+
+    .roadmap-title h3 {
+        font-size: 28px;
+    }
+
+    .guide-elem {
+        margin-bottom: 20px;
+    }
+
+    .footer-bottom p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 440px) {
+    .banner h1 {
+        font-size: 36px;
+    }
+}
