@@ -321,9 +321,12 @@ body, html {
 .progress-img {
     position: absolute; /* Posición absoluta para la imagen */
     top: 22px; /* Ajustar según el diseño necesario */
-    left: 90%; /* Ajustar según el diseño necesario */
+    left: 85%; /* Ajustar según el diseño necesario */
     transform: translate(-50%, -50%); /* Centrar la imagen correctamente */
-    height: 50px; /* Ajustar según el diseño necesario */
-    width: 50px; /* Ajustar según el diseño necesario */
+    height: 90px; /* Ajustar según el diseño necesario */
+    width: 90px; /* Ajustar según el diseño necesario */
 }
+
+
+
 
