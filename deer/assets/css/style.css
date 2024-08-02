@@ -1,0 +1,1076 @@
+@font-face {
+    font-family: 'Berlin Sans';
+    font-weight: 400;
+    src: url('../fonts/BRLNSR.ttf');
+}
+
+@font-face {
+    font-family: 'Berlin Sans';
+    font-weight: 700;
+    src: url('../fonts/BRLNSB.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-clr: #FFE172;
+    --secondary-clr: #0D0D0D;
+}
+
+body {
+    font-family: 'Berlin Sans', sans-serif;
+    color: #000;
+    background: #FBFEFF;
+}
+
+html {
+    scroll-padding-top: 84px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ccc;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0067af;
+}
+
+::selection {
+    background: #0067af;
+    color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a,
+.nav-link {
+    text-decoration: none;
+    transition: 0.2s linear;
+}
+
+.primary-btn {
+    font-size: 20px;
+    line-height: 1;
+    padding: 15px 24px;
+    border-radius: 16px;
+    color: #fff;
+    background-image: linear-gradient(58deg, #0067af 19%, #07aa9f 51%, #aff022 98%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+    border: solid 2px #fff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: 0.2s linear;
+    text-transform: uppercase;
+}
+
+button.primary-btn:hover {
+    box-shadow: none;
+}
+
+.title-group {
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 75px;
+    line-height: 1.1;
+    margin-bottom: 34px;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.sub-title {
+    font-size: 54px;
+    -webkit-text-stroke: 1px #00868f;
+    background-image: linear-gradient(66deg, #00a29d 20%, #00868f 50%, #005653 92%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 34px;
+}
+
+.description {
+    font-size: 18px;
+    color: #000;
+    line-height: 1.5;
+    text-transform: capitalize;
+}
+
+.inner-gap {
+    padding: 150px 0;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.45;
+    color: #000;
+    text-transform: capitalize;
+}
+
+/* loader */
+.loader-wrapper {
+    width: 100%;
+    z-index: 9999;
+    height: 100vh;
+    display: flex;
+}
+
+.loader {
+    width: 50px;
+    aspect-ratio: 1;
+    display: grid;
+    border: 4px solid #0000;
+    border-radius: 50%;
+    border-color: #ccc #0000;
+    animation: l16 1s infinite linear;
+}
+
+.loader::before,
+.loader::after {
+    content: "";
+    grid-area: 1/1;
+    margin: 2px;
+    border: inherit;
+    border-radius: 50%;
+}
+
+.loader::before {
+    border-color: #FFE172 #0000;
+    animation: inherit;
+    animation-duration: .5s;
+    animation-direction: reverse;
+}
+
+.loader::after {
+    margin: 8px;
+}
+
+@keyframes l16 {
+    100% {
+        transform: rotate(1turn)
+    }
+}
+
+/* Header */
+header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    padding: 32px 0;
+    transition: 0.2s linear;
+    background-color: #fff;
+}
+
+header.fixed {
+    background-color: #fff;
+    position: sticky;
+    padding: 16px 0;
+    box-shadow: 0 0 4px #d9d7d76b;
+}
+
+.navbar-collapse {
+    flex-grow: 0;
+}
+
+.navbar {
+    padding: 0;
+    position: relative;
+}
+
+#navbar-right .navbar-nav {
+    gap: 28px;
+}
+
+#navbar-right .navbar-nav .nav-link {
+    font-size: 18px;
+    font-weight: 400;
+    color: #000;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+#navbar-right .navbar-nav .nav-link:focus,
+#navbar-right .navbar-nav .nav-link:hover,
+#navbar-right .navbar-nav .nav-link.active {
+    color: #000;
+}
+
+.toggle-menu-icon {
+    width: 24px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.toggle-menu-icon span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+    background: #000;
+}
+
+.toggle-menu-icon span:nth-child(1) {
+    top: 2px;
+}
+
+.toggle-menu-icon span:nth-child(2),
+.toggle-menu-icon span:nth-child(3) {
+    top: 10px;
+}
+
+.toggle-menu-icon span:nth-child(4) {
+    top: 18px;
+}
+
+.toggle-menu-icon.open span:nth-child(1) {
+    top: 11px;
+    width: 0%;
+    left: 50%;
+}
+
+.toggle-menu-icon.open span:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.toggle-menu-icon.open span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+.toggle-menu-icon.open span:nth-child(4) {
+    top: 11px;
+    width: 0%;
+    left: 50%;
+}
+
+.navbar-toggler:focus,
+button:focus {
+    box-shadow: none;
+}
+
+/* Banner */
+.banner {
+    position: relative;
+    background-image: url('../images/banner-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 224px 0 50px;
+}
+
+.banner-icon {
+    margin-bottom: -14px;
+    margin-left: 36px;
+}
+
+.banner-elem h4 {
+    font-size: 40px;
+    color: #fff;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    display: inline-block;
+    padding: 8px 92px;
+    border-radius: 24px;
+    box-shadow: 0 5px 0 0 #fff;
+    border: solid 1px #fff;
+    background-image: linear-gradient(73deg, #00a29d 21%, #00868f 50%, #005653 91%);
+}
+
+.banner h1 {
+    margin: 20px 0;
+    text-shadow: 8px -8px 0 #fff,
+        -6px 8px 0 #fff,
+        -8px -8px 0 #fff,
+        6px 8px 0 #fff;
+    font-size: 100px;
+    font-weight: 700;
+    color: #090e34;
+    text-transform: uppercase;
+}
+
+.banner p {
+    font-size: 32px;
+    line-height: 1.5;
+    color: #000;
+    margin-bottom: 36px;
+}
+
+/* Counter */
+.counter-card {
+    background-image: url('../images/counter-card-bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    width: 336px;
+    height: 194px;
+}
+
+.counter-card h3 {
+    font-size: 60px;
+    line-height: 1.1;
+    margin-bottom: 13px;
+    color: #fff;
+}
+
+.counter-card p {
+    font-size: 24px;
+    line-height: 1.1;
+    color: #fff;
+}
+
+/* About */
+.about {
+    position: relative;
+}
+
+.social-media a {
+    display: grid;
+    place-content: center;
+    width: 86px;
+    font-size: 40px;
+    color: #000;
+    height: 86px;
+    border-radius: 10px;
+    border: 1.6px solid rgba(0, 0, 0, 0.2);
+}
+
+.about-left {
+    display: grid;
+    gap: 34px;
+}
+
+.about-left .social-media a:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* tekenomics */
+.tekenomics .primary-btn {
+    line-height: 1.8;
+}
+
+/* guide */
+.tekenomics, .guide {
+    background-image: url('../images/guide-bg.png');
+    background-size: cover;
+    background-position: top;
+}
+
+.guide-card {
+    height: 100%;
+    padding: 35px 30px;
+    border-radius: 30px;
+    background: #fff;
+    transition: 0.2s linear;
+    z-index: 9;
+    position: relative;
+}
+
+.guide-card:hover {
+    box-shadow: 0 0 10px #d3c0f3;
+}
+
+.guide-card h3 {
+    font-size: 32px;
+    -webkit-text-stroke: 1px #000;
+    color: #000;
+    margin: 32px 0 24px;
+    text-transform: uppercase;
+}
+
+.guide-card p {
+    font-size: 24px;
+    line-height: 1.5;
+    color: #000;
+}
+
+.guide-avatar {
+    margin: 50px 0;
+}
+
+/*  */
+.white-paper .description {
+    max-width: 642px;
+}
+
+/* ecosystem */
+.ecosystem {
+    background-image: url('../images/ecosystem-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 80px 0;
+    /* padding: 200px 0; */
+}
+
+.ecosystem-right {
+    margin: -80px 0;
+}
+
+.ecosystem .about-left {
+    padding: 100px 0;
+}
+
+/* Roadmap */
+.roadmap {
+    background-image: url('../images/roadmap-bg.png');
+    background-size: 100%;
+    background-position: bottom;
+    padding: 100px 0 60px;
+}
+
+.roadmap-card {
+    background-color: #fff;
+    height: 100%;
+    box-shadow: 0 4px 22.8px 0 rgba(0, 0, 0, 0.1);
+    position: relative;
+    border-radius: 24px;
+}
+
+.roadmap-card h3 {
+    font-size: 32px;
+    color: #fff;
+    border-radius: 24px 24px 0 0;
+    padding: 18px 24px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+    background-image: linear-gradient(68deg, #0067af 21%, #07aa9f 51%, #aff022 95%);
+}
+
+.roadmap-card ul {
+    border-radius: 0 0 24px 24px;
+    padding: 24px;
+    background-color: #fff;
+    display: grid;
+    gap: 20px;
+    min-height: 275px;
+}
+
+.roadmap-card ul li {
+    font-size: 20px;
+    line-height: 1.3;
+    color: #000;
+
+}
+
+.roadmap-card.roadmap-card-2 {
+    margin-top: 50px;
+}
+
+/* Footer */
+.footer-top {
+    background-image: url('../images/footer-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 0;
+    position: relative;
+}
+
+footer .input-group {
+    background: #D2D4D5;
+}
+
+footer .input-group .form-control {
+    background: transparent;
+    box-shadow: none;
+    border: 0;
+}
+
+footer .input-group button {
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    padding: 13px 17px;
+    background-color: #020202;
+    border: 0;
+}
+
+.footer-menu li a {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 180%;
+    font-weight: 500;
+    padding: 5px 10px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+footer .social-media {
+    margin-bottom: 32px;
+}
+
+.social-media a {
+    display: grid;
+    place-content: center;
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+    color: #fff;
+    border-radius: 50%;
+    border: 1.6px solid #fff;
+}
+
+footer h4 {
+    font-size: 26px;
+    font-weight: 700;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    background-image: linear-gradient(#0067af 21%, #07aa9f 51%, #aff022 94%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Responsive CSS */
+
+@media (min-width: 1500px) {
+    .container {
+        max-width: 1456px;
+    }
+}
+
+@media (max-width: 1600px) {
+    .section-title {
+        font-size: 60px;
+    }
+
+    .banner h1 {
+        font-size: 80px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .section-title {
+        font-size: 50px;
+    }
+
+    #navbar-right .navbar-nav {
+        gap: 20px;
+    }
+
+    header {
+        padding: 20px 0;
+    }
+
+    .inner-gap {
+        padding: 100px 0;
+    }
+
+    #navbar-right .navbar-nav .nav-link {
+        font-size: 16px;
+    }
+
+    .title-group {
+        margin-bottom: 36px;
+    }
+
+    .banner {
+        padding: 150px 0 50px;
+    }
+
+    .roadmap-card h3 {
+        font-size: 22px;
+    }
+
+
+
+    .counter-card {
+        width: 285px;
+        height: 165px;
+    }
+
+    .counter-card h3 {
+        font-size: 50px;
+    }
+
+    .about-left {
+        gap: 26px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .section-title {
+        font-size: 40px;
+    }
+
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #fff;
+        width: 100%;
+        margin-top: 16px;
+    }
+
+    .navbar-collapse.show {
+        box-shadow: 0 2px 4px #9191916b;
+    }
+
+    #navbar-right .navbar-nav {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 20px 0;
+    }
+
+    .guide-card {
+        padding: 26px;
+        border-radius: 26px;
+    }
+
+    /*  */
+    .banner {
+        padding: 120px 0 50px;
+    }
+
+    .banner h1 {
+        font-size: 54px;
+    }
+
+    .about-left ul a img {
+        width: 50px;
+    }
+
+    .title-group {
+        margin-bottom: 30px;
+    }
+
+    .about-left h4 {
+        font-size: 24px;
+    }
+
+    .roadmap-card h3 {
+        font-size: 22px;
+        border-radius: 20px 20px 0 0;
+        padding: 18px 22px;
+    }
+
+    .roadmap-card ul {
+        border-radius: 0 0 20px 20px;
+        padding: 16px;
+    }
+
+    .roadmap-card ul li {
+        font-size: 18px;
+    }
+
+    .footer-top {
+        padding: 50px 0;
+    }
+
+    .ecosystem .about-left {
+        padding: 0;
+    }
+
+    .ecosystem {
+        padding: 40px 0;
+    }
+
+    .primary-btn {
+        font-size: 18px;
+        padding: 12px 14px;
+        border-radius: 10px;
+    }
+
+    .about-left {
+        gap: 22px;
+    }
+
+    .roadmap {
+        padding: 70px 0 60px;
+    }
+
+    .guide-card h3 {
+        font-size: 26px;
+        margin: 24px 0;
+    }
+
+    .guide-card p {
+        font-size: 22px;
+    }
+
+    .counter-card {
+        width: 312px;
+        height: 183px;
+    }
+}
+
+@media (max-width: 991px) {
+    #navbar-right .navbar-nav {
+        max-width: 960px;
+    }
+
+    #navbar-right .navbar-nav {
+        gap: 0;
+        max-width: 720px;
+    }
+
+    #navbar-right .navbar-nav .nav-link {
+        font-size: 18px;
+        padding: 8px 20px;
+    }
+
+    .ecosystem .about-left {
+        padding: 40px 0;
+    }
+
+    /*  */
+    .section-title {
+        font-size: 36px;
+        margin-bottom: 24px;
+    }
+
+    .guide-card {
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .roadmap-card.roadmap-card-2 {
+        margin: 0;
+    }
+
+    .guide-card p {
+        font-size: 20px;
+    }
+
+    .guide-card h3 {
+        font-size: 26px;
+        margin: 18px 0;
+    }
+
+    .inner-gap {
+        padding: 70px 0;
+    }
+
+    .title-group {
+        margin-bottom: 24px;
+    }
+
+    .banner {
+        padding: 120px 0 50px;
+    }
+
+    .banner h1 {
+        font-size: 50px;
+    }
+
+    .ecosystem-right {
+        margin: 0px;
+    }
+
+    .ecosystem-right, .white-paper-right {
+        text-align: center;
+    }
+
+    .ecosystem .about-left {
+        padding: 10px 0 40px;
+    }
+
+    .ecosystem {
+        margin: 0;
+    }
+
+
+
+    .tekenomics-left img,
+    .white-paper-right img,
+    .ecosystem-right img {
+        width: 420px;
+    }
+
+    .about-left {
+        gap: 20px;
+    }
+
+    .banner-elem h4 {
+        font-size: 30px;
+        padding: 8px 45px;
+        border-radius: 20px;
+    }
+
+    .banner p {
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+
+    .how-buy-right img {
+        width: 240px;
+    }
+}
+
+@media (max-width: 767px) {
+    html {
+        scroll-padding-top: 72px;
+    }
+
+    header {
+        padding: 12px 0;
+    }
+
+    header.fixed {
+        padding: 12px 0;
+    }
+
+    #navbar-right .navbar-nav {
+        max-width: 540px;
+    }
+
+    .footer-logo img {
+        max-width: 160px;
+    }
+
+    .footer-menu li a {
+        font-size: 16px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .counter-card h3 {
+        font-size: 44px;
+    }
+
+    .counter-card p {
+        font-size: 22px;
+    }
+
+    .primary-btn {
+        font-size: 18px;
+    }
+
+    .counter-card {
+        width: 266px;
+        height: 154px;
+    }
+
+    .inner-gap {
+        padding: 70px 0;
+    }
+
+    .banner {
+        padding: 100px 0 40px;
+    }
+
+    .banner h1 {
+        font-size: 50px;
+    }
+
+    .banner p {
+        font-size: 25px;
+        margin-bottom: 24px;
+    }
+
+    .roadmap-card {
+        text-align: center;
+    }
+
+    .roadmap-card h3 {
+        font-size: 18px;
+        border-radius: 12px 12px 0 0;
+        padding: 14px 12px;
+    }
+
+    .roadmap-card ul {
+        font-size: 16px;
+        border-radius: 0 0 14px 14px;
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .footer-top {
+        padding: 40px 0;
+    }
+
+    .about-right {
+        text-align: center;
+    }
+
+    .about-right img {
+        width: 340px;
+    }
+
+    .banner-elem h4 {
+        font-size: 30px;
+        border-radius: 16px;
+    }
+
+    .guide-card p {
+        font-size: 20px;
+    }
+
+    .white-paper-right img,
+    .ecosystem-right img {
+        width: 390px;
+    }
+
+
+    .roadmap {
+        padding: 60px 0;
+    }
+
+    .how-buy-right img {
+        width: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    #navbar-right .navbar-nav .nav-link {
+        font-size: 16px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+
+    .navbar-collapse {
+        margin-top: 12px;
+    }
+
+    .primary-btn {
+        font-size: 16px;
+        border-radius: 10px;
+        padding: 10px 10px;
+    }
+
+    /*  */
+    .about-left h4 {
+        font-size: 20px;
+    }
+
+    .section-title {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+    .inner-gap {
+        padding: 40px 0;
+    }
+
+    .footer-bottom p {
+        font-size: 14px;
+    }
+
+    .banner h1 {
+        text-shadow: 5px -5px 0 #fff,
+            -4px 5px 0 #fff,
+            -5px -5px 0 #fff,
+            4px 5px 0 #fff;
+    }
+
+    .counter-card {
+        width: 263px;
+        height: 152px;
+    }
+
+    .counter-card h3 {
+        font-size: 40px;
+    }
+
+    .banner p {
+        font-size: 18px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+
+    .about-left {
+        gap: 14px;
+    }
+
+    .navbar-brand img {
+        width: 190px;
+    }
+
+    .roadmap-card-2 {
+        margin-top: 30px;
+    }
+
+    .banner-icon img {
+        height: 100px;
+    }
+
+    .banner-icon {
+        margin-bottom: -6px;
+        margin-left: 20px;
+    }
+
+    .banner-elem h4 {
+        font-size: 22px;
+        padding: 8px 32px;
+        border-radius: 12px;
+    }
+
+    .guide-card {
+        padding: 16px;
+    }
+
+    .guide-card h3 {
+        font-size: 22px;
+        margin: 12px 0;
+    }
+
+    .guide-card p {
+        font-size: 16px;
+    }
+
+    .tekenomics .primary-btn {
+        line-height: 1.5;
+    }
+
+
+
+    .roadmap {
+        padding: 40px 0;
+    }
+
+    .roadmap-card.roadmap-card-2 {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 440px) {
+    .banner h1 {
+        font-size: 32px;
+        margin-bottom: 12px;
+    }
+
+    .navbar-brand img {
+        width: 170px;
+    }
+}
