@@ -1,0 +1,1203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-clr: #D9E368;
+    --secondary-clr: #0D0D0D;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    background: #000;
+}
+
+html {
+    scroll-padding-top: 84px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ccc;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #5C8309;
+}
+
+::selection {
+    background: #5C8309;
+    color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a,
+.nav-link {
+    text-decoration: none;
+    transition: 0.2s linear;
+}
+
+.primary-btn {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 14px 24px;
+    color: #fff;
+    background-color: #5C8309;
+    border: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: 0.2s linear;
+    text-transform: capitalize;
+}
+
+button.primary-btn {
+    -webkit-text-stroke: 1px #354e00;
+    /* box-shadow: none; */
+}
+
+.title-group {
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 34px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+
+.description {
+    font-size: 24px;
+    color: #fff;
+    line-height: 1.5;
+    text-transform: capitalize;
+}
+
+.inner-gap {
+    padding: 130px 0;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.45;
+    color: #000;
+    text-transform: capitalize;
+}
+
+.text-light-green {
+    color: #D9E368 !important;
+}
+
+/* loader */
+.loader-wrapper {
+    width: 100%;
+    z-index: 9999;
+    height: 100vh;
+    display: flex;
+}
+
+.loader {
+    width: 50px;
+    aspect-ratio: 1;
+    display: grid;
+    border: 4px solid #0000;
+    border-radius: 50%;
+    border-color: #ccc #0000;
+    animation: l16 1s infinite linear;
+}
+
+.loader::before,
+.loader::after {
+    content: "";
+    grid-area: 1/1;
+    margin: 2px;
+    border: inherit;
+    border-radius: 50%;
+}
+
+.loader::before {
+    border-color: #FFE172 #0000;
+    animation: inherit;
+    animation-duration: .5s;
+    animation-direction: reverse;
+}
+
+.loader::after {
+    margin: 8px;
+}
+
+@keyframes l16 {
+    100% {
+        transform: rotate(1turn)
+    }
+}
+
+/* Header */
+.header-top {
+    padding: 15px 0;
+    background-color: #000;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    top: 30px;
+    z-index: 999;
+    padding: 0;
+    transition: 0.2s linear;
+    background-color: #D9E368;
+}
+
+header.fixed {
+    background-color: #D9E368;
+    top: 0;
+    position: sticky;
+    padding: 0;
+    box-shadow: 0 0 4px #d9d7d76b;
+}
+
+header .primary-btn {
+    padding: 30px 37px;
+}
+
+.navbar-collapse {
+    flex-grow: 0;
+}
+
+.navbar {
+    padding: 0;
+    position: relative;
+}
+
+#navbar-right .navbar-nav {
+    gap: 28px;
+}
+
+#navbar-right .navbar-nav .nav-link {
+    font-size: 18px;
+    font-weight: 400;
+    color: #000;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+#navbar-right .navbar-nav .nav-link:focus,
+#navbar-right .navbar-nav .nav-link:hover,
+#navbar-right .navbar-nav .nav-link.active {
+    color: #000;
+}
+
+.toggle-menu-icon {
+    width: 24px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.toggle-menu-icon span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+    background: #000;
+}
+
+.toggle-menu-icon span:nth-child(1) {
+    top: 2px;
+}
+
+.toggle-menu-icon span:nth-child(2),
+.toggle-menu-icon span:nth-child(3) {
+    top: 10px;
+}
+
+.toggle-menu-icon span:nth-child(4) {
+    top: 18px;
+}
+
+.toggle-menu-icon.open span:nth-child(1) {
+    top: 11px;
+    width: 0%;
+    left: 50%;
+}
+
+.toggle-menu-icon.open span:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.toggle-menu-icon.open span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+.toggle-menu-icon.open span:nth-child(4) {
+    top: 11px;
+    width: 0%;
+    left: 50%;
+}
+
+.navbar-toggler:focus,
+button:focus {
+    box-shadow: none;
+}
+
+/* Banner */
+.banner {
+    position: relative;
+    background-image: url('../images/banner-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 224px 0 136px;
+}
+
+.banner h1 {
+    font-size: 64px;
+    line-height: 1;
+    font-weight: 900;
+    margin: 64px 0 32px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.banner p {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #fff;
+    margin-bottom: 24px;
+    max-width: 872px;
+}
+
+.banner .primary-btn {
+    margin-bottom: 32px;
+}
+
+.social-media a {
+    display: grid;
+    place-content: center;
+    width: 42px;
+    height: 42px;
+    font-size: 24px;
+    color: #000;
+    background-color: #D9E368;
+    border-radius: 8px;
+    border: 0;
+}
+
+.social-media a:hover {
+    background-color: #000;
+    color: #D9E368;
+    border: 1px solid #D9E368;
+
+}
+
+/* About */
+.about {
+    background-image: url('../images/about-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.about-wrapper {
+    padding: 66px 19px 66px 94px;
+    background-color: #232323;
+    border-radius: 0 150px;
+}
+.whitepaper-left,
+.about-left {
+    display: grid;
+    gap: 34px;
+}
+
+.about-left .social-media a:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* Why Buy */
+.why-buy {
+    background-color: #FBFEFF;
+}
+
+.why-buy-left .description {
+    max-width: 727px;
+}
+
+.why-buy-left ul {
+    display: grid;
+    gap: 24px;
+    place-items: baseline;
+}
+
+.why-buy-left ul li {
+    padding: 10px 32px;
+    background-color: #5c8309;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.why-buy-left h4 {
+    font-size: 34px;
+    font-weight: 500;
+}
+
+/* guide */
+.guide {
+    background-color: #FDFFE5;
+}
+
+.guide-card {
+    height: 100%;
+    padding: 32px;
+    border-radius: 0 30px;
+    background: #000;
+    transition: 0.2s linear;
+    z-index: 9;
+    position: relative;
+}
+
+.guide-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 18px;
+    text-transform: capitalize;
+}
+
+.guide-card p {
+    font-size: 16px;
+    line-height: 1.75;
+    color: #fff;
+}
+
+.guide-avatar {
+    margin: 50px 0;
+}
+
+/* roadmap */
+.roadmap {
+    background-image: url('../images/roadmap-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.roadmap-left {
+    display: grid;
+    gap: 32px;
+    place-items: baseline;
+}
+
+.roadmap-left h4 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #d9e368;
+}
+
+.roadmap-line {
+    height: 100%;
+    width: 2px;
+    background-color: #fff;
+    position: relative;
+    margin-left: auto;
+}
+
+.roadmap-line::before,
+.roadmap-line::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    top: 0;
+}
+
+.roadmap-line::after {
+    top: auto;
+    bottom: 0;
+}
+
+.roadmap-card-wrapper {
+    display: grid;
+    gap: 35px;
+}
+
+.roadmap-card {
+    position: relative;
+    padding: 20px 0 20px 86px;
+}
+
+.roadmap-card::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 70px;
+    background-color: #fff;
+    left: 0;
+    top: 40px;
+}
+
+.roadmap-card::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #D9E368;
+    top: 38px;
+    left: 68px;
+}
+
+.roadmap-title {
+    font-size: 30px;
+    font-weight: 800;
+    color: #fff;
+    width: 35%;
+}
+
+.roadmap-content {
+    width: 60%;
+    list-style: disc;
+    color: #fff;
+}
+
+.roadmap-content li {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.67;
+    color: #fff;
+}
+
+/*  */
+.teconomics {
+    background-color: #FBFEFF;
+}
+
+
+.teconomics-card {
+    position: relative;
+    padding: 60px 22px 22px 22px;
+}
+
+.teconomics-card-2 {
+    padding: 22px 22px 60px 22px;
+    margin-top: 47px;
+}
+
+.teconomics-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    background-image: url('../images/teconomic-card-bg.png');
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 50%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+}
+
+.teconomics-card.teconomics-card-2::before {
+    bottom: auto;
+    top: 0;
+    transform: rotateX(180deg);
+}
+
+.teconomics-card-content {
+    position: relative;
+    text-align: center;
+    padding: 110px 15px 52px 15px;
+    background-color: #fdffe5;
+    border: 1px solid #5c8309;
+    border-radius: 20px;
+}
+
+.teconomics-card-2 .teconomics-card-content {
+    padding: 52px 15px 110px 15px;
+}
+
+.teconomics-card span {
+    font-size: 32px;
+    font-weight: 700;
+    color: #000;
+    height: 136px;
+    width: 136px;
+    border-radius: 50%;
+    border: 12px solid #5c8309;
+    background-color: #fff;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    place-content: center;
+    z-index: 99;
+}
+
+.teconomics-card.teconomics-card-2 span {
+    top: auto;
+    bottom: 0;
+}
+
+.teconomics-card h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+.teconomics-card p {
+    font-size: 16px;
+}
+
+/* Footer */
+.footer-top {
+    background-image: url('../images/footer-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 68px 0;
+    position: relative;
+}
+
+footer .input-group {
+    background: #D2D4D5;
+}
+
+footer .input-group .form-control {
+    background: transparent;
+    box-shadow: none;
+    border: 0;
+}
+
+footer .input-group button {
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    padding: 13px 17px;
+    background-color: #020202;
+    border: 0;
+}
+
+.footer-menu li a {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.8;
+    padding: 10px;
+    color: #d9e368;
+    text-transform: uppercase;
+}
+
+.footer-bottom {
+    padding: 10px 0;
+    background-color: var(--primary-clr);
+}
+
+footer p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.8;
+    text-align: center;
+    color: #232323;
+}
+
+/* Responsive CSS */
+
+@media (min-width: 1500px) {
+    .container {
+        max-width: 1458px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .teconomics-card h3 {
+        font-size: 24px;
+    }
+
+    .teconomics-card p {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 1400px) {
+    .section-title {
+        font-size: 50px;
+    }
+
+
+    #navbar-right .navbar-nav {
+        gap: 20px;
+    }
+
+    .inner-gap {
+        padding: 100px 0;
+    }
+
+  
+
+    .title-group {
+        margin-bottom: 36px;
+    }
+
+    .banner {
+        padding: 150px 0 100px;
+    }
+
+    .banner h1 {
+        font-size: 54px;
+        margin: 40px 0 20px;
+    }
+
+    .banner p {
+        font-size: 20px;
+    }
+
+    .about-wrapper {
+        padding: 50px 19px 50px 50px;
+        border-radius: 0 120px;
+    }
+
+    .why-buy-left h4 {
+        font-size: 26px;
+    }
+
+    .why-buy-left ul li {
+        padding: 10px 22px;
+        font-size: 20px;
+    }
+
+    .roadmap-title {
+        font-size: 25px;
+    }
+
+    .description {
+        font-size: 22px;
+    }
+
+    .whitepaper-left {
+        gap: 26px;
+    }
+
+    .teconomics-card span {
+        font-size: 24px;
+        height: 116px;
+        width: 116px;
+    }
+
+    .teconomics-card-2 .teconomics-card-content {
+        padding: 42px 15px 80px 15px;
+    }
+
+    .teconomics-card-content {
+        padding: 80px 15px 42px 15px;
+    }
+
+    .teconomics-card h3 {
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .section-title {
+        font-size: 40px;
+    }
+
+    .header-top {
+        padding: 10px 0;
+    }
+
+    header {
+        top: 20px;
+    }
+
+    header .primary-btn {
+        font-size: 22px;
+        padding: 24px;
+    }
+
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #D9E368;
+        width: 100%;
+    }
+
+    .navbar-collapse.show {
+        box-shadow: 0 2px 4px #9191916b;
+    }
+
+    #navbar-right .navbar-nav {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 20px 0;
+    }
+
+    .guide-card {
+        padding: 26px;
+    }
+
+    /*  */
+    .banner {
+        padding: 130px 0 80px;
+    }
+
+    .banner h1 {
+        font-size: 44px;
+    }
+
+    .banner p {
+        font-size: 18px;
+    }
+
+    .why-buy-left h4 {
+        font-size: 22px;
+    }
+
+    .description {
+        font-size: 20px;
+    }
+
+    .why-buy-left ul li {
+        font-size: 18px;
+    }
+
+
+    .about-left ul a img {
+        width: 50px;
+    }
+
+    .title-group {
+        margin-bottom: 30px;
+    }
+
+    .about-left h4 {
+        font-size: 24px;
+    }
+
+    .footer-top {
+        padding: 50px 0;
+    }
+
+    .primary-btn {
+        font-size: 18px;
+        padding: 12px 14px;
+    }
+
+    .whitepaper-left {
+        gap: 22px;
+    }
+
+    .teconomics-card::before {
+        background-size: cover;
+    }
+
+    .teconomics-card-2 {
+        margin-top: 0;
+    }
+
+    .roadmap-card {
+        padding: 16px 0 16px 55px;
+    }
+
+    .roadmap-card::before {
+        width: 40px;
+    }
+
+    .roadmap-card::after {
+        left: 40px;
+    }
+
+    .roadmap-title {
+        font-size: 22px;
+    }
+
+    .roadmap-content li {
+        font-size: 18px;
+    }
+
+    .roadmap-left h4 {
+        font-size: 36px;
+    }
+
+    .roadmap-left {
+        gap: 20px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .inner-gap {
+        padding: 90px 0;
+    }
+
+    .roadmap-card-wrapper {
+        gap: 24px;
+    }
+}
+
+@media (max-width: 991px) {
+    #navbar-right .navbar-nav {
+        max-width: 960px;
+    }
+
+    #navbar-right .navbar-nav {
+        gap: 0;
+        max-width: 720px;
+    }
+
+    #navbar-right .navbar-nav .nav-link {
+        font-size: 18px;
+        padding: 8px 20px;
+    }
+    /*  */
+    .section-title {
+        font-size: 36px;
+        margin-bottom: 24px;
+    }
+
+    .guide-card {
+        padding: 20px;
+    }
+
+    .inner-gap {
+        padding: 70px 0;
+    }
+
+    .title-group {
+        margin-bottom: 24px;
+    }
+
+    .banner {
+        padding: 100px 0 60px;
+    }
+
+    .banner h1 {
+        font-size: 40px;
+    }
+
+    .white-paper-right img {
+        width: 420px;
+    }
+
+    .whitepaper-left {
+        gap: 20px;
+    }
+
+    .banner-elem img,
+    .about-right img,
+    .why-buy-right img {
+        width: 240px;
+    }
+
+    .teconomics-card p {
+        -webkit-line-clamp: 4;
+    }
+
+    .description {
+        font-size: 18px;
+    }
+
+    .why-buy-left ul, .roadmap-left {
+        gap: 12px;
+        place-items: center;
+    }
+
+    .roadmap-left {
+        gap: 20px;
+    }
+
+    .guide-card h3 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 767px) {
+    html {
+        scroll-padding-top: 72px;
+    }
+
+    #navbar-right .navbar-nav {
+        max-width: 540px;
+    }
+
+    .footer-logo img {
+        max-width: 160px;
+    }
+
+    .footer-menu li a {
+        font-size: 16px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .primary-btn {
+        font-size: 18px;
+    }
+
+    .inner-gap {
+        padding: 70px 0;
+    }
+
+    .banner {
+        padding: 100px 0 40px;
+    }
+
+    .banner h1 {
+        font-size: 36px;
+        margin: 20px 0;
+    }
+
+    .footer-top {
+        padding: 40px 0;
+    }
+
+    .about-right {
+        text-align: center;
+    }
+
+    .white-paper-right img {
+        width: 300px;
+    }
+
+    .why-buy-right img {
+        width: 240px;
+    }
+
+    .teconomics-card,
+    .teconomics-card-2 {
+        padding: 60px 0 0;
+    }
+
+    .teconomics-card-2 .teconomics-card-content,
+    .teconomics-card-content {
+        padding: 60px 15px 30px 15px;
+    }
+
+    .teconomics-card::before,
+    .teconomics-card.teconomics-card-2::before {
+        display: none;
+    }
+
+    .teconomics-card-2 {
+        margin-top: 0;
+    }
+
+    .teconomics-card.teconomics-card-2 span {
+        top: 0;
+        bottom: auto;
+    }
+
+    .about-right img {
+        width: 220px;
+    }
+
+    .about-wrapper {
+        padding: 50px 19px 50px;
+        border-radius: 0 70px;
+    }
+
+    .banner p,
+    footer p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 576px) {
+    #navbar-right .navbar-nav .nav-link {
+        font-size: 16px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .primary-btn {
+        font-size: 15px;
+        padding: 10px 10px;
+    }
+
+    header .primary-btn {
+        padding: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    /*  */
+    .about-left h4 {
+        font-size: 20px;
+    }
+
+    .section-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .inner-gap {
+        padding: 40px 0;
+    }
+
+    .footer-bottom p {
+        font-size: 14px;
+    }
+
+    .whitepaper-left {
+        gap: 14px;
+    }
+
+    .navbar-brand img {
+        width: 190px;
+    }
+
+    .guide-card {
+        padding: 16px;
+    }
+
+    .guide-card h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    .banner-elem img, .about-right img, .why-buy-right img {
+        width: 200px;
+    }
+
+    .roadmap-card::after,
+    .roadmap-card::before {
+        display: none;
+    }
+
+    .roadmap-card {
+        padding: 0 0 0 20px;
+    }
+
+    .roadmap-card-wrapper {
+        gap: 16px;
+    }
+
+    .roadmap-title {
+        width: 100%;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .roadmap-content li {
+        font-size: 16px;
+    }
+
+    .roadmap-content {
+        width: 100%;
+        padding-left: 18px;
+    }
+
+    .white-paper-right img {
+        width: 220px;
+    }
+
+    .about-wrapper {
+        padding: 30px 12px;
+        border-radius: 0 40px;
+    }
+
+    .social-media a {
+        width: 36px;
+        height: 36px;
+        font-size: 20px;
+    }
+
+    .guide-card p,
+    .why-buy-left ul li {
+        font-size: 14px;
+    }
+
+    .teconomics-card, .teconomics-card-2 {
+        padding: 40px 0 0;
+    }
+
+    .teconomics-card-2 .teconomics-card-content, .teconomics-card-content {
+        padding: 45px 15px 20px 15px;
+    }
+
+    .teconomics-card span {
+        font-size: 20px;
+        height: 80px;
+        width: 80px;
+        border: 8px solid #5c8309;
+    }
+
+    .roadmap-left h4 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 440px) {
+    .banner h1 {
+        font-size: 26px;
+    }
+
+    .navbar-brand img {
+        width: 170px;
+    }
+
+    .banner-elem img, .about-right img, .why-buy-right img {
+        width: 160px;
+    }
+
+    .footer-bottom p {
+        font-size: 12px;
+    }
+}
